@@ -183,6 +183,77 @@ header > div > img {
   font-weight: 400;
   padding-bottom: 10px;
 }
+/* CATEGORY */
+#category {
+  width: 100%;
+  margin-top: var(--rc-margin-section);
+}
+#category > div:first-child > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  position: relative;
+}
+
+#category div > ul {
+  gap: 0px;
+  cursor: pointer;
+  justify-content: space-around;
+}
+
+#category div > ul > li > a > img {
+  width: 100%;
+  height: auto;
+}
+#category > div > ul > li > a > p {
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  left: 40%;
+  padding: var(--rc-padding-md);
+  text-decoration: underline;
+  color: var(--rc-color-white);
+}
+#category > div:nth-child(2),
+#category > div:nth-child(3) {
+  background-color: var(--rc-color-dark);
+  margin-top: -5px;
+  padding: var(--rc-padding-sm);
+}
+
+#category > div:nth-child(2) > ul > li {
+  display: flex;
+  align-items: center;
+  width: 32%;
+  position: relative;
+}
+
+#category > div:nth-child(3) > ul > li {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 49%;
+}
+#category > div:nth-child(3) > ul > li > a {
+  width: 100%;
+  height: auto;
+}
+#category > div:nth-child(3) > ul > li > a > p {
+  left: 20%;
+}
+
+#category > div:nth-child(2) > ul > li > a > p,
+#category > div:nth-child(3) > ul > li > a > p {
+  text-decoration: underline;
+  color: var(--rc-color-dark);
+}
+#category > div:nth-child(3) {
+  display: none;
+}
+#category > div:nth-child(3) > ul > li:first-child > a > p {
+  color: var(--rc-color-white);
+}
 
 /* MEDIA QUERIS */
 @media (max-width: 1300px) {
@@ -244,5 +315,20 @@ header > div > img {
   }
   #editorial > div > div > h2 {
     font-size: 0.9em;
+  }
+  #category > div:first-child > ul > li:last-child {
+    display: none;
+  }
+  #category > div:nth-child(2) {
+    display: none;
+  }
+  #category > div:nth-child(3) {
+    display: block;
+  }
+  #category > div:first-child > ul > li {
+    width: 100%;
+  }
+  #category > div:first-child > ul > li > a > p {
+    left: 30%;
   }
 }
