@@ -594,4 +594,7 @@ footer > div:first-child > div:last-child > li > p {
   footer > div:first-child > div:last-child {
     width: 100%;
   }
+  #aviso-footer > ul {
+    gap: var(--rc-gap-sm);
+  }
 }
