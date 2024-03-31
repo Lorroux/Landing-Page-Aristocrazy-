@@ -67,6 +67,7 @@ a {
 .tablet {
   display: none;
 }
+
 /* HEADER */
 .burger {
   display: none;
@@ -85,6 +86,10 @@ a {
   font-size: 0.8em;
   font-weight: 500;
 }
+#menu > nav > ul > li {
+  transition: 0.5s;
+}
+
 #menu > nav > ul > li:hover {
   text-decoration: underline;
   font-weight: 600;
@@ -289,20 +294,7 @@ header > div > img {
   width: 100%;
   height: auto;
 }
-.first {
-  position: relative;
-  z-index: 2;
-  max-width: 25vw;
-}
-.second {
-  position: absolute;
-  opacity: 0;
-  max-width: 25vw;
-}
-.second:hover {
-  opacity: 1;
-  max-width: 25vw;
-}
+
 #carrusel > ul > li > a > span {
   font-weight: 600;
 }
@@ -352,7 +344,6 @@ header > div > img {
   background-color: var(--rc-color-dark);
   color: var(--rc-color-white);
   width: 100%;
-
   padding: var(--rc-padding-xl);
 }
 #user > div {
@@ -374,6 +365,108 @@ header > div > img {
   border-radius: 0px;
   border: none;
 }
+/*BENEFITS*/
+#benefits {
+  background-color: var(--rc-color-light-gray);
+  width: 100%;
+  height: 25vh;
+  justify-content: space-evenly;
+  border-bottom: solid 0.5px var(--rc-color-dark);
+}
+#benefits > ul > li {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: var(--rc-gap-md);
+  width: 22%;
+}
+
+#benefits > ul > li > a > p {
+  font-weight: 300;
+}
+#benefits > ul > li > a > h3 {
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+#benefits > ul > li > a > img {
+  width: 10%;
+  padding-bottom: 5px;
+}
+/*FOOTER*/
+footer {
+  background-color: var(--rc-color-light-gray);
+  width: 100%;
+  flex-direction: column;
+}
+
+footer > div:first-child {
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: var(--rc-padding-md);
+}
+#nav-footer {
+  width: 70%;
+  gap: var(--rc-gap-sm);
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--rc-padding-md);
+}
+footer > div:first-child > div:last-child {
+  width: 20%;
+}
+footer > div:first-child > div:last-child > li {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rc-gap-sm);
+}
+footer > div:first-child > div:last-child > li > button {
+  padding: var(--rc-padding-sm);
+  font-weight: 200;
+  font-size: var(--rc-font-size-text);
+  border-radius: 0px;
+  border: none;
+  background-color: var(--rc-color-dark);
+}
+footer > div:first-child > div:last-child > li > button > a {
+  color: var(--rc-color-white);
+}
+footer > div:first-child > div:last-child > li > p {
+  font-weight: 300;
+  font-size: 0.9em;
+}
+
+#nav-footer > ul {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  width: 24%;
+  align-items: flex-start;
+  gap: var(--rc-gap-sm);
+}
+#nav-footer > ul > li {
+  font-size: 0.8em;
+}
+#nav-footer > ul > li:first-child {
+  font-weight: 600;
+  font-size: 1em;
+}
+#redes-footer {
+  width: 53%;
+  justify-content: flex-end;
+}
+#aviso-footer {
+  background-color: var(--rc-color-gray);
+  width: 100%;
+  padding: var(--rc-padding-sm);
+  font-size: 0.9em;
+  gap: var(--rc-gap-sm);
+  justify-content: space-around;
+}
+.fa-circle {
+  font-size: 0.5em;
+  color: grey;
+}
+
 /* MEDIA QUERIS */
 @media (max-width: 1300px) {
   #menu > nav {
@@ -382,17 +475,31 @@ header > div > img {
   .tablet {
     display: block;
   }
+  .tablet > ul > li {
+    transition: 0.5s;
+  }
   .tablet > ul > li:hover {
     text-decoration: underline;
     font-weight: 600;
   }
+
   #img-home > img:nth-child(1) {
     display: none;
   }
   #img-home > img:nth-child(2) {
     display: block;
   }
+  #redes-footer {
+    width: 95%;
+  }
+  #nav-footer {
+    width: 100%;
+  }
+  footer > div:first-child > div:last-child {
+    width: 40%;
+  }
 }
+
 @media (max-width: 900px) {
   .tablet {
     display: none;
@@ -456,13 +563,7 @@ header > div > img {
   #carrusel > ul > li > a {
     width: 60vw;
   }
-  .second:hover {
-    opacity: 1;
-    max-width: 60vw;
-  }
-  .first {
-    max-width: 60vw;
-  }
+
   #carrusel > h1 {
     font-size: var(--rc-font-size-h2);
     text-align: center;
@@ -474,6 +575,19 @@ header > div > img {
     display: none;
   }
   #experiences > div:nth-child(1) > ul > li {
+    width: 100%;
+  }
+  #benefits > ul > li {
+    width: 45%;
+  }
+  #redes-footer {
+    width: 95%;
+  }
+  #nav-footer > ul {
+    width: 40%;
+    padding-bottom: 20px;
+  }
+  footer > div:first-child > div:last-child {
     width: 100%;
   }
 }
